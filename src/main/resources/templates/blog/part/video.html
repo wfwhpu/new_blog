@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+<body>
+   
+	<div class="widget-wrap" th:fragment="video">
+		<ul class="archive-list">
+			<li class="archive-list-item" style="cursor: pointer"
+				th:each="video : ${videoList}"><video class="video-js" controls
+					preload="auto" width="684" height="500"
+					poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+					<source th:src="'/video/junjun/'+${video}" type="video/mp4">
+				</video></li>
+		</ul>
+	</div>
+  
+</body>
+</html>

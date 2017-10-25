@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+<html>
+	<head>
+		<title>DaYan|error</title>
+		<meta name="keywords" content="DaYan blog 404" />
+		<link href="/css/error.css" rel="stylesheet" type="text/css"  media="all" />
+	</head>
+	<body>
+		<!--start-wrap--->
+		<div class="wrap">
+			<!---start-header---->
+				<div class="header">
+					<div class="logo">
+						<h1><a href="#">Sorry, the page error</a></h1>
+					</div>
+				</div>
+			<!---End-header---->
+			<!--start-content------>
+			<div class="content">
+			    status:<span th:text="${status}"></span><br />
+			    error:<span th:text="${error}"></span><br />
+			    path:<span th:text="${path}"></span><br />
+			    customMessage:<span th:text="${customMessage}"></span><br />
+   			</div>
+   			<div style="text-align:center">
+   				<a href="/">Back To Home</a>
+   			</div>
+			<!--End-Cotent------>
+		</div>
+		<!--End-wrap--->
+	</body>
+</html>
+

@@ -1,0 +1,91 @@
+##七牛云的key
+qiniu:
+  accessKey: VI1t1OJd6MF_ZCyhIkxbAkzeeNb2MLBcNC7EwysR
+  secretKey: 5tNFPXqVfSW9fwl8Ip6sSPjDd3vZTUylfSkDhCem
+  bucketName: dayan
+  basePath: http://ouhzgqgj4.bkt.clouddn.com/
+
+## 百度推送
+baidu:
+  task:
+    postUrl: http://data.zz.baidu.com/urls?site=opentest.zhlic.com.cn&token=hHzO6TjfJBf4KA53
+    baseUrl: https://opentest.zhlic.com.cn/
+
+#数据库连接配置
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/zblog
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    #mode: HTML5
+    mode: LEGACYHTML5
+    #thymeleaf模板对没有结束符的HTML5标签解析出错的解决办法
+    cache: false
+  #字符集和json格式工具
+  http:
+    encoding:
+      charset: utf-8
+    converters:
+      preferred-json-mapper: jackson
+    multipart:
+      max-file-size: 10MB
+  application:
+    name: dayan
+  #redis配置
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器地址
+    host: 10.1.0.151
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password: 
+    # 连接池最大连接数（使用负值表示没有限制）
+    pool.max-active: 8
+    # 连接池最大阻塞等待时间（使用负值表示没有限制）
+    pool.max-wait: -1
+    # 连接池中的最大空闲连接
+    pool.max-idle: 8
+    # 连接池中的最小空闲连接
+    pool.min-idle: 0
+    # 连接超时时间（毫秒）
+    timeout: 0
+  #邮件地址
+  mail:
+    host: smtp.126.com
+    username: wfw_hpu@126.com
+    password: wei152391wu
+    default-encoding: UTF-8
+    fromMail.addr: wfw_hpu@126.com
+  ##elasticsearch配置
+  data:
+    elasticsearch:
+       cluster-name: elasticsearch#默认为elasticsearch
+       cluster-nodes: #配置es节点信息，逗号分隔，如果没有指定，则启动ClientNode
+       properties:
+         path:
+           logs: ./elasticsearch/log #elasticsearch日志存储目录
+           data: ./elasticsearch/data #elasticsearch数据存储目录
+#mynatis配置
+mybatis:
+  type-aliases-package: com.eumji.zblog.vo
+  #mapper加载路径
+  mapper-locations: classpath:mapper/*Mapper.xml
+  #myatbis配置文件
+  config-location: classpath:mybatis-conf.xml
+#加载log4j2
+logging:
+  config: classpath:log4j2.xml
+  level: debug
+  file: classpath:daYan-log.log
+server:
+  session-timeout : 3600
+  port: 8088
+
+
+
+
+
