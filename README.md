@@ -6,7 +6,7 @@
 
 初期开发已经完成,网站已经上线.
 
-演示站: http://www.eumji025.com
+演示站: 、https://opentest.zhlic.com.cn
 
 # 用户部分说明
 
